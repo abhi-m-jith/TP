@@ -35,7 +35,13 @@ initializeApp(firebaseConfig)
 const db = getFirestore()
 const DocRef = doc(db, "SpinnerTimerBools", "TeenPatti")
 const UssRef= collection(db,"users")
-const sleepNow = (delay) => new Promise((resolve) => setTimeout(resolve, delay))
+//const sleepNow = (delay) => new Promise((resolve) => setTimeout(resolve, delay))
+
+function sleepNow(ms) {
+  return new Promise((resolve) => {
+    setTimeout(resolve, ms);
+  });
+}
 
 var Trail = [[4, 4, 4], [1, 1, 1], [12, 12, 12]];
 var Pure = [[2, 3, 4], [8, 9, 10], [1, 2, 3], [1, 13, 12], [7, 6, 5]];
