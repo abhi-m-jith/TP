@@ -52,8 +52,7 @@ var HighCard = [[1, 9, 13], [3, 6, 1], [12, 9, 10], [1, 6, 9], [10, 4, 2], [3, 8
 
 
 async function GT() {
-   
-
+   updateDoc(DocRef, {Today: Timestamp.now()});
     let Timerr = 55;
     for (let i = 0; i <= Timerr; i++) 
     {
