@@ -191,8 +191,13 @@ async function GetActiveUsersCount()
 {
     const NQ =  query(UssRef,where("LOG", "==", true))
     const querySnapshot = await getDocs(NQ);
-     console.log(querySnapshot.size);
-    return querySnapshot.size;
+    console.log(querySnapshot.size);
+    var K=querySnapshot.size - 1;
+    if(K <= 0)
+    {
+        K=1;
+    }
+    return K;
 }
 
 
